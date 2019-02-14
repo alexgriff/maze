@@ -1,0 +1,133 @@
+.main {
+  width: 600px;
+  height: 600px;
+}
+
+.outer {
+  margin: 25px auto;
+  padding: 20px;
+  background-color: rgb(245, 245, 250);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.field {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.input {
+  outline: 0;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(40, 160, 230);
+  color: rgb(40, 160, 230);
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.input:disabled {
+  border: 1px solid rgb(200, 200, 200);
+  color: rgb(228, 228, 228);
+}
+
+.input:disabled:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.btn:hover {
+  background-color: rgb(230, 240, 250);
+}
+
+.maze {
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(220, 225, 230);
+  border-radius: 4px;
+  align-self: center;
+  margin-bottom: 10px;
+  display: grid;
+}
+
+.maze.small {
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(10, 10%);
+}
+
+.maze.medium {
+  grid-template-columns: repeat(25, 4%);
+  grid-template-rows: repeat(25, 4%);
+}
+
+.maze.large {
+  grid-template-columns: repeat(50, 2%);
+  grid-template-rows: repeat(50, 2%);
+}
+
+.cell.top {
+  border-top: 2px solid black;
+}
+
+.cell.right {
+  border-right: 2px solid black;
+}
+
+.cell.bottom {
+  border-bottom: 2px solid black;
+}
+
+.cell.left {
+  border-left: 2px solid black;
+}
+
+.maze.small .cell.top {
+  border-top: 4px solid black;
+}
+
+.maze.small .cell.right {
+  border-right: 4px solid black;
+}
+
+.maze.small .cell.bottom {
+  border-bottom: 4px solid black;
+}
+
+.maze.small .cell.left {
+  border-left: 4px solid black;
+}
+
+.maze.large .cell.top {
+  border-top: 1px solid black;
+}
+
+.maze.large .cell.right {
+  border-right: 1px solid black;
+}
+
+.maze.large .cell.bottom {
+  border-bottom: 1px solid black;
+}
+
+.maze.large .cell.left {
+  border-left: 1px solid black;
+}
+
+.maze .cell.origin {
+  background-color: rgba(33, 186, 69, 0.5);
+}
+
+.maze .cell.destination {
+  background-color: rgba(219, 40, 40, 0.5);
+}
+
+.cell.path {
+  background-color: rgba(175, 175, 175, 0.75);
+}
+
+.cell.queue {
+  background-color: rgba(240, 200, 100, 0.75);
+}
